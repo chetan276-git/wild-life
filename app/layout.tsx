@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import { Montserrat, Sora } from 'next/font/google';
-import '../styles/global.scss';
-import Navbar from './components/nav/NavBar';
+import './global.scss';
+import Navbar from '@/components/nav/NavBar';
+import Footer from '@/components/footer/footer';
+import WhatsAppButton from '@/components/wahtsAppButton/whatsAppButton';
 
 const geistSans = Montserrat({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-  weight: ['700'],
+  weight: ['300', '400', '500', '700'],
 });
 const geistSora = Sora({
   variable: '--font-geist-sora',
@@ -31,6 +33,8 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

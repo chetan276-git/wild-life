@@ -10,15 +10,16 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
-        mansalva: ['Mansalva', 'serif'],
+        amatic: ['Amatic SC', 'serif'],
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(to right, #ee9226, #ffd11a)',
+        'gradient-primary': 'linear-gradient(to right, #f96e2a, #f96e2a)',
         'text-gradient': 'linear-gradient(to right, #ee9226, #ffd11a)',
       },
 
       colors: {
-        primary: '#ffd11a',
+        primary: '#00c06d',
+        secondary: '#f96e2a',
       },
     },
   },
