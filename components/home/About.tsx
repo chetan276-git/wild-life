@@ -8,13 +8,13 @@ const AboutHome = () => {
   return (
     <section className='bg-[#0b0c14]'>
       <div className='container '>
-        <div className='flex gap-16'>
+        <div className='flex gap-16 items-center'>
           <div className='w-2/4 relative'>
-            <div className='w-full aspect-[0.8] sticky top-4'>
+            <div className='w-full aspect-[1]'>
               <Image
-                src='/images/gallery/dear.jpg'
+                src='/images/gallery/about-us.png'
                 fill
-                objectFit='cover'
+                objectFit='contain'
                 alt='About Image'
                 className='rounded-xl'
               />
@@ -26,11 +26,11 @@ const AboutHome = () => {
                 subtitle={'Welcome to Wanderluxe Expeditions'}
                 heading={'About Us'}
                 description={
-                  'Welcome to Wanderluxe Expeditions, your trusted partner in exploring the untamed beauty of nature. We specialize in curating unforgettable wildlife experiences, offering expertly guided tours that bring you closer to the wonders of the wild.'
+                  ' Welcome to Wanderluxe Expeditions, your trusted partner in exploring the untamed beauty of nature. We specialize in curating unforgettable wildlife experiences, offering expertly guided tours that bring you closer to the wonders of the wild.Welcome to Wanderluxe Expeditions, your trusted partner in exploring the untamed beauty of nature. We specialize in curating unforgettable wildlife experiences, offering expertly guided tours that bring you closer to the wonders of the wild.Welcome to Wanderluxe Expeditions, your trusted partner in exploring the untamed beauty of nature. We specialize in curating unforgettable wildlife experiences, offering expertly guided tours that bring you closer to the wonders of the wild.'
                 }
               />
 
-              <ul className='mb-10 mt-10 flex flex-col gap-6'>
+              {/* <ul className='mb-10 mt-10 flex flex-col gap-6'>
                 {[
                   {
                     icon: '',
@@ -65,7 +65,7 @@ const AboutHome = () => {
                     </div>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
               <Button
                 text='Learn More'
                 size='medium'

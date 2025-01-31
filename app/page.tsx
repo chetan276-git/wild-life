@@ -1,26 +1,22 @@
 'use client';
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
-import Image from 'next/image';
+import 'swiper/css';
 import HomeDestination from '@/components/home/Destination';
-import Button from '@/components/button/Button';
 import AboutHome from '@/components/home/About';
 import Testimonial from '@/components/home/Testimonial';
 
-const SliderImages = ['/images/banner/banner-6.jpg'];
-
-import { motion } from 'framer-motion';
+import SliderComponent from '@/components/home/Destination2';
+import HeroSlider from '@/components/home/myhero';
 
 const HomePage = () => {
   return (
     <>
-      <div className={`banner-overlay-gradient w-full h-screen relative`}>
+      {/* <div className={`banner-overlay-gradient w-full h-screen relative`}>
         <Swiper
           className='mySwiper absolute top-0 left-0 w-full h-full z-10'
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -56,8 +52,10 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <HeroSlider />
       <AboutHome />
+      <SliderComponent />
       <HomeDestination />
       <Testimonial />
     </>

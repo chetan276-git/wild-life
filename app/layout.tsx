@@ -6,14 +6,14 @@ import Footer from '@/components/footer/footer';
 import WhatsAppButton from '@/components/wahtsAppButton/whatsAppButton';
 
 const geistSans = Montserrat({
-  variable: '--font-geist-sans',
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
+  variable: '--font-montserrat',
 });
 const geistSora = Sora({
-  variable: '--font-geist-sora',
   subsets: ['latin'],
   weight: ['400', '500'],
+  variable: '--font-sora',
 });
 
 export const metadata: Metadata = {
