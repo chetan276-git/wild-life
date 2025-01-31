@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        montserrat: 'var(--font-montserrat)',
+        sora: 'var(--font-sora)',
         amatic: ['Amatic SC', 'serif'],
       },
       backgroundImage: {
@@ -19,7 +20,7 @@ export default {
 
       colors: {
         primary: '#00c06d',
-        secondary: '#f96e2a',
+        secondary: '#F57328',
       },
     },
   },

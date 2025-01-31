@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className='bg-[#14151b]'>
       {/* bg-[#f7bf39]  */}
       <div className='container relative'>
-        <div className='news-latter-wrapper bg-[#f7bf39] rounded-3xl'>
+        <div className='news-latter-wrapper bg-secondary rounded-3xl'>
           <div className='aspect-[1.5] absolute w-[35%] bottom-0'>
             <Image
               src='/images/effects/effect-03.png'

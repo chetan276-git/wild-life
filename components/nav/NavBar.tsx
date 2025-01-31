@@ -46,9 +46,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className='text-white absolute w-full z-[999]'>
+    <nav className='text-white absolute w-full z-[999] py-6'>
       <div className='container'>
-        <div className='flex justify-between items-center h-20'>
+        <div className='flex justify-between items-center'>
           <div className='flex-shrink-0'>
             <Link href='/'>
               <Image
