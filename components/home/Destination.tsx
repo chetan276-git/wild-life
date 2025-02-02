@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PageHeader from '../pageHeader/PageHeader';
 
-import { destinationsCategories } from '@/data/destinations';
+import { destinationsCategories } from '../../app/data/categories';
 
 const HomeDestination = () => {
   return (
