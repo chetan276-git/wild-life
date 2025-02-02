@@ -41,7 +41,7 @@ const HomeDestination = () => {
         <div className='mt-16 grid grid-cols-3 justify-center  gap-4 destination-grid-wrapper'>
           {destinationsCategories.map((item, i) => (
             <Link href={`/destination/${item.slug}`} key={i}>
-              <div className='relative h-[300px] shadow-2xl w-full aspect-[2] z-0 pb-10 rounded-xl overflow-hidden transition-all duration-600'>
+              <div className='relative h-[300px] shadow-2xl w-full aspect-[2] z-0 pb-10 overflow-hidden transition-all duration-600'>
                 <Image
                   src={`${item.img}`}
                   fill

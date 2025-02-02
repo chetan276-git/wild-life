@@ -36,7 +36,7 @@ export default function MasonryPage() {
                 <Image
                   fill
                   src={item}
-                  className='w-full object-cover rounded-lg !relative mb-4'
+                  className='w-full object-cover !relative mb-4'
                   quality={2}
                   loading='lazy'
                   alt='Image'
