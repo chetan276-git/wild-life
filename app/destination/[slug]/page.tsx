@@ -1,20 +1,22 @@
-// app/destination/[slug]/page.tsx
+'use client';
 
-import { destinationsCategories } from '../../data/categories'; // Import the categories data
-import { notFound } from 'next/navigation'; // Next.js 13 feature to handle not found pages
+import { useSearchParams } from 'next/navigation';
+import { destinationsCategories } from '../../data/categories';
 import Image from 'next/image';
-import ImagesSlider from '@/components/ImagesSlider/ImagesSlider'; // Assuming you already have this component
+import ImagesSlider from '@/components/ImagesSlider/ImagesSlider';
 
-// Fetching the category based on the slug
-export default async function CategoryPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const destinationCategory = await getDestinationCategory(params.slug);
+export default function CategoryPage() {
+  // Get search params from the URL
+  const searchParams = useSearchParams();
+  const categoryQuery = searchParams.get('category');
+
+  // Find the category based on the query parameter
+  const destinationCategory = destinationsCategories.find(
+    (cat) => cat.slug === categoryQuery
+  );
 
   if (!destinationCategory) {
-    notFound(); // This is a Next.js built-in function that triggers a 404
+    return <p>Category not found.</p>;
   }
 
   return (
@@ -61,16 +63,4 @@ export default async function CategoryPage({
       </div>
     </div>
   );
-}
-
-// Helper function to get the category based on the slug
-async function getDestinationCategory(slug: string) {
-  return destinationsCategories.find((cat) => cat.slug === slug) || null;
-}
-
-// This function generates static paths for dynamic routes (based on the slugs)
-export async function generateStaticParams() {
-  return destinationsCategories.map((cat) => ({
-    slug: cat.slug, // Generating paths based on the slug
-  }));
 }
