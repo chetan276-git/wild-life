@@ -8,6 +8,8 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import Button from '../button/Button';
 
+import { Swiper as SwiperType } from 'swiper';
+
 const images = [
   {
     id: 1,
@@ -35,7 +37,7 @@ const images = [
 export default function HeroSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = (swiper: SwiperType) => {
     setActiveIndex(swiper.realIndex);
   };
 

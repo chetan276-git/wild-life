@@ -16,7 +16,7 @@ export default function SlideRight({ children, delay, className }: props) {
     if (isInview) {
       controls.start('visible');
     }
-  }, [isInview]);
+  }, [isInview, controls]);
 
   return (
     <motion.div

@@ -1,20 +1,20 @@
 // app/destination/[slug]/page.tsx
-import ImagesSlider from '@/components/ImagesSlider/ImagesSlider';
-import { destinationsCategories } from '@/data/destinations';
-import { notFound } from 'next/navigation';
+
+import { destinationsCategories } from '../../data/categories'; // Import the categories data
+import { notFound } from 'next/navigation'; // Next.js 13 feature to handle not found pages
 import Image from 'next/image';
+import ImagesSlider from '@/components/ImagesSlider/ImagesSlider'; // Assuming you already have this component
 
-interface CategoryPageProps {
+// Fetching the category based on the slug
+export default async function CategoryPage({
+  params,
+}: {
   params: { slug: string };
-}
-
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const destinationCategory = destinationsCategories.find(
-    (cat) => cat.slug === params.slug
-  );
+}) {
+  const destinationCategory = await getDestinationCategory(params.slug);
 
   if (!destinationCategory) {
-    notFound();
+    notFound(); // This is a Next.js built-in function that triggers a 404
   }
 
   return (
@@ -24,7 +24,6 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         title={destinationCategory.name}
         description={destinationCategory.description}
       />
-      {/* <ImagesFeed /> */}
       <div className='content-wrapper py-20 text-white'>
         <div className='container flex gap-8 flex-col'>
           <div className='flex flex-col gap-6'>
@@ -39,13 +38,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
               />
             </div>
             <p className='text-md font-normal font-montserrat text-gray-100'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae corrupti magnam ratione, saepe eum nobis voluptatum
-              quisquam dolor, consectetur architecto ipsum repellendus
-              perspiciatis, assumenda magni ipsam illum similique eveniet vel
-              distinctio tempore totam inventore vitae natus voluptatem! Ipsam
-              atque consequuntur, recusandae repudiandae quasi ducimus ex alias
-              hic tenetur, voluptate, fuga perspiciatis accusamus.
+              {destinationCategory.description}
             </p>
           </div>
           <div className='flex flex-col gap-6'>
@@ -60,24 +53,24 @@ export default function CategoryPage({ params }: CategoryPageProps) {
               />
             </div>
             <p className='text-md font-normal font-montserrat text-gray-100'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae corrupti magnam ratione, saepe eum nobis voluptatum
-              quisquam dolor, consectetur architecto ipsum repellendus
-              perspiciatis, assumenda magni ipsam illum similique eveniet vel
-              distinctio tempore totam inventore vitae natus voluptatem! Ipsam
-              atque consequuntur, recusandae repudiandae quasi ducimus ex alias
-              hic tenetur, voluptate, fuga perspiciatis accusamus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Recusandae corrupti
-              magnam ratione, saepe eum nobis voluptatum quisquam dolor,
-              consectetur architecto ipsum repellendus perspiciatis, assumenda
-              magni ipsam illum similique eveniet vel distinctio tempore totam
-              inventore vitae natus voluptatem! Ipsam atque consequuntur,
-              recusandae repudiandae quasi ducimus ex alias hic tenetur,
-              voluptate, fuga perspiciatis accusamus.
+              Explore the details of the tour, including itineraries, schedules,
+              and everything you need to know.
             </p>
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+// Helper function to get the category based on the slug
+async function getDestinationCategory(slug: string) {
+  return destinationsCategories.find((cat) => cat.slug === slug) || null;
+}
+
+// This function generates static paths for dynamic routes (based on the slugs)
+export async function generateStaticParams() {
+  return destinationsCategories.map((cat) => ({
+    slug: cat.slug, // Generating paths based on the slug
+  }));
 }
