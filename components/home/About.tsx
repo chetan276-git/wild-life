@@ -25,7 +25,6 @@ const AboutHome = () => {
                   fill
                   objectFit='cover'
                   alt='About Image'
-                  className='rounded-xl'
                 />
               </div>
             </SlideLeft>
