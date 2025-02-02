@@ -6,10 +6,8 @@ import 'swiper/css/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import PageHeader from '../pageHeader/PageHeader';
-import Guide from './Guide';
 
 import { destinationsCategories } from '@/data/destinations';
-import { Arrow } from '../Icons';
 
 const HomeDestination = () => {
   return (
