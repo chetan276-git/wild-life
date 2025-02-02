@@ -14,27 +14,28 @@ const images = [
     src: '/images/banner/banner-6.jpg',
     title: 'Explore the Wild',
     description:
-      'Experience the untamed beauty of nature and embark on thrilling wildlife adventures.',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
   },
   {
     id: 2,
     src: '/images/banner/banner-3.jpg',
     title: 'Adventure Awaits',
     description:
-      'Discover breathtaking landscapes and create unforgettable memories.',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
   },
   {
     id: 3,
     src: '/images/banner/banner-2.jpeg',
     title: 'Deep Into Nature',
-    description: 'Immerse yourself in the serene beauty of the wilderness.',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
   },
 ];
 
 export default function HeroSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.realIndex);
   };
 
@@ -69,19 +70,19 @@ export default function HeroSlider() {
       <AnimatePresence>
         <motion.div
           key={images[activeIndex].id}
-          className='absolute inset-0 flex flex-col justify-center items-center text-white text-center w-full z-40'
+          className='absolute inset-0 flex flex-col justify-center items-center text-white text-center w-full z-40 max-w-[70%] mx-auto'
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className='text-6xl font-bold drop-shadow-xl'>
+          <h1 className='text-8xl font-bold drop-shadow-xl uppercase'>
             {images[activeIndex].title}
           </h1>
-          <p className='text-lg font-normal drop-shadow-lg mt-4 mb-6 max-w-[70%] mx-auto'>
+          <p className='text-xl font-medium font-barlowSemoCondensed drop-shadow-lg mt-4 mb-10 max-w-[70%] mx-auto'>
             {images[activeIndex].description}
           </p>
-          <Button text={' Learn More'} />
+          <Button text={'More Inquiry'} />
         </motion.div>
       </AnimatePresence>
     </div>

@@ -51,7 +51,7 @@ const SliderImages = [
 
 const Guide = () => {
   return (
-    <section className='pt-0 pb-0'>
+    <section className='pb-0'>
       <div className='container'>
         <div className='text-center'>
           <PageHeader

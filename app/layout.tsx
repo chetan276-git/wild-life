@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat, Sora } from 'next/font/google';
+import { Montserrat, Barlow_Semi_Condensed } from 'next/font/google';
 import './global.scss';
 import Navbar from '@/components/nav/NavBar';
 import Footer from '@/components/footer/footer';
@@ -10,10 +10,10 @@ const geistSans = Montserrat({
   weight: ['300', '400', '500', '700'],
   variable: '--font-montserrat',
 });
-const geistSora = Sora({
+const geistBarlowSemoCondensed = Barlow_Semi_Condensed({
   subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-sora',
+  weight: ['400', '500', '600'],
+  variable: '--font-barlow-semi-condensed',
 });
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistSora.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistBarlowSemoCondensed.variable}  antialiased`}
       >
         <Navbar />
         {children}

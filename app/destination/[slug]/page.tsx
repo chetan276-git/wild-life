@@ -25,7 +25,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         title={destinationCategory.name}
         description={destinationCategory.description}
       />
-      <ImagesFeed />
+      {/* <ImagesFeed /> */}
       <div className='content-wrapper py-20 text-white'>
         <div className='container flex gap-8 flex-col'>
           <div className='flex flex-col gap-6'>
