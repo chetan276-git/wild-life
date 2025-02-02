@@ -10,7 +10,7 @@ export default {
     extend: {
       fontFamily: {
         montserrat: 'var(--font-montserrat)',
-        sora: 'var(--font-sora)',
+        barlowSemoCondensed: 'var(--font-barlow-semi-condensed)',
         amatic: ['Amatic SC', 'serif'],
       },
       backgroundImage: {

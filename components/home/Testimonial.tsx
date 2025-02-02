@@ -54,7 +54,7 @@ const TestimonialCard = () => {
             </svg>
           ))}
         </div>
-        <p className='text-slate-400 text-md leading-8'>
+        <p className='text-[#ffffffa6] text-md'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde
           autem provident similique rerum illum? Illum omnis facilis voluptatum
           sint.

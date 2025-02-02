@@ -1,4 +1,5 @@
 import React from 'react';
+import SlideUp from '../SlideUp';
 
 interface HeaderProps {
   subtitle?: string;
@@ -13,16 +14,24 @@ const PageHeader: React.FC<HeaderProps> = ({
 }) => {
   return (
     <>
-      {subtitle && (
-        <h6 className='font-amatic text-3xl font-bold text-primary'>
-          {subtitle}
-        </h6>
-      )}
-      <h2 className='text-white text-4xl font-medium mt-5'>{heading}</h2>
+      <SlideUp delay={0.3}>
+        {subtitle && (
+          <h6 className='font-amatic text-3xl font-bold text-primary'>
+            {subtitle}
+          </h6>
+        )}
+      </SlideUp>
+      <SlideUp delay={0.3}>
+        <h2 className='font-barlowSemoCondensed text-white text-5xl font-semibold  mt-5'>
+          {heading}
+        </h2>
+      </SlideUp>
       {description && (
-        <p className='text-md text-gray-200 mt-4 mb-6 font-extralight font-montserrat'>
-          {description}
-        </p>
+        <SlideUp delay={0.3}>
+          <p className='text-xl text-[#ffffffb3] mt-4 mb-6 font-normal font-barlowSemoCondensed'>
+            {description}
+          </p>
+        </SlideUp>
       )}
     </>
   );

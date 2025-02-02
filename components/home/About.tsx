@@ -3,23 +3,34 @@ import Button from '../button/Button';
 import Image from 'next/image';
 import PageHeader from '../pageHeader/PageHeader';
 import { Arrow } from '../Icons';
+import SlideLeft from '../SlideUp';
+import SlideUp from '../SlideUp';
 
 const AboutHome = () => {
   return (
-    <section className='bg-[#0b0c14]'>
+    <section className='bg-[#0b0c14] relative'>
+      <Image
+        src='/images/effects/bg-overlay2.png'
+        fill
+        alt='Bg Overlay'
+        className='absolute top-0 left-0 w-full h-full aspect-[1] z-10 opacity-40'
+      />
       <div className='container '>
         <div className='flex gap-16 items-center'>
           <div className='w-2/4 relative'>
-            <div className='w-full aspect-[1]'>
-              <Image
-                src='/images/gallery/about-us.png'
-                fill
-                objectFit='contain'
-                alt='About Image'
-                className='rounded-xl'
-              />
-            </div>
+            <SlideLeft delay={0.3}>
+              <div className='w-full aspect-[0.8]'>
+                <Image
+                  src='/images/gallery/dear.jpg'
+                  fill
+                  objectFit='cover'
+                  alt='About Image'
+                  className='rounded-xl'
+                />
+              </div>
+            </SlideLeft>
           </div>
+
           <div className='w-2/3'>
             <div className='text-left'>
               <PageHeader
@@ -66,13 +77,17 @@ const AboutHome = () => {
                   </li>
                 ))}
               </ul> */}
-              <Button
-                text='Learn More'
-                size='medium'
-                shape='pill'
-                icon={<Arrow />}
-                iconPosition='right'
-              />
+              <SlideUp delay={0.3}>
+                <div className='mt-10'>
+                  <Button
+                    text='Learn More'
+                    size='medium'
+                    shape='pill'
+                    icon={<Arrow />}
+                    iconPosition='right'
+                  />
+                </div>
+              </SlideUp>
             </div>
           </div>
         </div>

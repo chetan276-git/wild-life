@@ -24,9 +24,9 @@ export default function Navbar() {
         { label: 'Luxury Overseas', href: '/' },
       ],
     },
-    { label: 'Gallery', href: '/' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'Guide', href: '/' },
-    { label: 'Contact Us', href: '/' },
+    { label: 'Contact Us', href: '/contact-us' },
   ];
 
   useEffect(() => {
@@ -67,8 +67,8 @@ export default function Navbar() {
                   href={link.href || '#'}
                   className={`${
                     link.label === 'Contact Us'
-                      ? 'border border-secondary px-3 py-1 rounded-full hover:bg-secondary hover:text-white transition-all'
-                      : 'nav-link text-white opacity-1'
+                      ? 'border border-secondary px-4 py-2 rounded-full hover:bg-secondary hover:text-white transition-all font-medium text-lg font-barlowSemoCondensed'
+                      : 'nav-link text-white opacity-1 font-medium text-lg font-barlowSemoCondensed'
                   }`}
                 >
                   {link.label}
@@ -77,7 +77,7 @@ export default function Navbar() {
                 <div key={index} className='relative' ref={dropdownRef}>
                   <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className='hover:text-gray-300 focus:outline-none flex items-center gap-2'
+                    className='hover:text-gray-300 focus:outline-none flex items-center gap-2 font-medium text-lg font-barlowSemoCondensed'
                   >
                     {link.label}{' '}
                     <div

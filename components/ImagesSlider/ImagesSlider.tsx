@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 
 import Image from 'next/image';
+import SlideUp from '../SlideUp';
 
 interface SliderImage {
   images: string[];
@@ -23,7 +24,7 @@ const ImagesSlider: React.FC<SliderImage> = ({
 }) => {
   return (
     <>
-      <div className='relative h-[60vh] z-10 category-overlay-gradient '>
+      <div className='relative h-[60vh] z-10 overlay-sub-pages'>
         <Swiper
           className='mySwiper'
           modules={[Autoplay, FreeMode]}
@@ -50,15 +51,20 @@ const ImagesSlider: React.FC<SliderImage> = ({
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className='over-content absolute top-[30%] translate-y-1/2 z-30 w-full'>
+        <div className='over-content absolute top-[50%] translate-y-[-50%] z-30 w-full'>
           <div className='container text-center'>
-            <h1 className='text-white font-semibold font-montserrat text-5xl'>
-              {title}
-            </h1>
-
-            <p className='text-white font-normal font-montserrat text-md mt-3'>
-              {description}
-            </p>
+            <div className='w-full max-w-[65%] mx-auto'>
+              <SlideUp delay={0.3}>
+                <h1 className='text-white font-semibold font-barlowSemoCondensed text-6xl'>
+                  {title}
+                </h1>
+              </SlideUp>
+              <SlideUp delay={0.3}>
+                <p className='text-white font-medium font-montserrat text-lg mt-3'>
+                  {description}
+                </p>
+              </SlideUp>
+            </div>
           </div>
         </div>
       </div>

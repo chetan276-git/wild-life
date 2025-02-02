@@ -7,8 +7,8 @@ import HomeDestination from '@/components/home/Destination';
 import AboutHome from '@/components/home/About';
 import Testimonial from '@/components/home/Testimonial';
 
-import SliderComponent from '@/components/home/Destination2';
-import HeroSlider from '@/components/home/myhero';
+import HeroBanner from '@/components/home/HeroBanner';
+import Guide from '@/components/home/Guide';
 
 const HomePage = () => {
   return (
@@ -53,10 +53,10 @@ const HomePage = () => {
           </div>
         </div>
       </div> */}
-      <HeroSlider />
+      <HeroBanner />
       <AboutHome />
-      <SliderComponent />
       <HomeDestination />
+      <Guide />
       <Testimonial />
     </>
   );
