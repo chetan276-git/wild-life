@@ -19,7 +19,7 @@ const ContactUsPage = () => {
           <div className='relative z-20 flex items-center justify-end h-full'>
             <div className='contact-wrapper p-10 rounded-lg bg-[#060e15]/80 text-white min-w-[40%]'>
               <h2 className='text-4xl font-semibold font-barlowSemoCondensed'>
-                It's time to get to know each other!
+                It&apos;s time to get to know each other!
               </h2>
               <div className='flex flex-col mt-8 gap-4'>
                 <div>

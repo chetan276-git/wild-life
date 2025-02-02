@@ -35,7 +35,7 @@ const images = [
 export default function HeroSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleSlideChange = (swiper: any) => {
+  const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.realIndex);
   };
 

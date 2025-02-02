@@ -2,7 +2,6 @@ import React from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Email, Phone } from '../Icons';
 
 const Links = [
   { link: '#', linkName: 'Home' },
@@ -72,8 +71,8 @@ const Footer = () => {
             </ul>
           </div>
           <div className='images-wrapper py-10 grid grid-cols-6 gap-4'>
-            {InstallImage.map((ele) => (
-              <div className='relative aspect-[1.5]'>
+            {InstallImage.map((ele, i) => (
+              <div className='relative aspect-[1.5]' key={i}>
                 <Image
                   src={ele}
                   fill
@@ -107,7 +106,7 @@ const Footer = () => {
               <h5 className='text-white font-semibold text-xl'>Quick Links</h5>
               <ul className='flex gap-2 flex-col mt-4'>
                 {Links.map((item, i) => (
-                  <li>
+                  <li key={i}>
                     <Link href={item.link}>{item.linkName}</Link>
                   </li>
                 ))}

@@ -3,7 +3,6 @@ import ImagesSlider from '@/components/ImagesSlider/ImagesSlider';
 import { destinationsCategories } from '@/data/destinations';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import ImagesFeed from '@/components/imagesFeed/imagesFeed';
 
 interface CategoryPageProps {
   params: { slug: string };
