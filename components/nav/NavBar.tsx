@@ -132,37 +132,46 @@ export default function Navbar() {
         </div>
       </div>
 
-      {!isMenuOpen && (
-        <div className='md:hidden fixed top-0 left-0 w-[250px] h-screen'>
-          <div className='px-2 pt-2 pb-3 space-y-1 bg-red-700'>
-            {navLinks.map((link, index) =>
-              !link.dropdown ? (
-                <Link key={index} href={link.href || '#'}>
+      <div
+        className={`${
+          isMenuOpen
+            ? 'md:hidden fixed top-0 left-0 w-[80%] h-full transform transition-all duration-300 ease-in-out'
+            : 'md:hidden fixed top-0 left-[-100%] w-[80%] h-full transform transition-all duration-300 ease-in-out'
+        }`}
+      >
+        <div className='p-4 bg-[#171822]/95 border border-[#727da133] backdrop-blur-md backdrop-opacity-20 w-full h-full flex flex-col gap-6 font-medium font-poppins text-sm'>
+          <Link href='/'>
+            <Image
+              src='/images/logo/logo.svg'
+              width={140}
+              height={100}
+              alt='Logo'
+            />
+          </Link>
+          {navLinks.map((link, index) =>
+            !link.dropdown ? (
+              <Link key={index} href={link.href || '#'}>
+                {link.label}
+              </Link>
+            ) : (
+              <div key={index} className='relative' ref={dropdownRef}>
+                <div onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                   {link.label}
-                </Link>
-              ) : (
-                <div key={index} className='relative' ref={dropdownRef}>
-                  <button
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className='w-full text-left px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700'
-                  >
-                    {link.label}
-                  </button>
-                  {isDropdownOpen && (
-                    <div className='mt-2 bg-white text-black rounded-md shadow-lg'>
-                      {link.items.map((item, idx) => (
-                        <Link key={idx} href={item.href}>
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
                 </div>
-              )
-            )}
-          </div>
+                {isDropdownOpen && (
+                  <div className='mt-4 flex flex-col gap-4 px-3'>
+                    {link.items.map((item, idx) => (
+                      <Link key={idx} href={item.href}>
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          )}
         </div>
-      )}
+      </div>
     </nav>
   );
 }
