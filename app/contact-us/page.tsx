@@ -15,13 +15,13 @@ const ContactUsPage = () => {
           className='absolute z-10'
         />
 
-        <div className='container h-full pt-40 pb-24'>
+        <div className='container h-full pt-24 md:pt-40 pb-10 lg:pb-24'>
           <div className='relative z-20 flex items-center justify-end h-full'>
-            <div className='contact-wrapper p-10 rounded-lg bg-[#060e15]/80 text-white min-w-[40%]'>
-              <h2 className='text-4xl font-semibold font-barlowSemoCondensed'>
+            <div className='contact-wrapper p-4 lg:p-10 rounded-lg bg-[#060e15]/80 text-white w-full lg:min-w-[40%]'>
+              <h2 className='text-2xl lg:text-4xl font-semibold font-barlowSemoCondensed'>
                 It&apos;s time to get to know each other!
               </h2>
-              <div className='flex flex-col mt-8 gap-4'>
+              <div className='flex flex-col mt-6 lg:mt-8 gap-4'>
                 <div>
                   <label className='block mb-2 text-md font-medium text-gray-900 dark:text-white'>
                     Name

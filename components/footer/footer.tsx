@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className='bg-[#14151b]'>
       <div className='container'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 text-white pt-0 lg:pt-10 items-center'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 text-white pt-10 items-center'>
           <Link href='#' className='flex items-center gap-4'>
             <div className='w-8 h-8 lg:w-16 p-2 lg:p-4 lg:h-16 flex items-center justify-center rounded-full bg-black'>
               <svg

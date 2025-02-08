@@ -24,7 +24,7 @@ const ImagesSlider: React.FC<SliderImage> = ({
 }) => {
   return (
     <>
-      <div className='relative h-[60vh] z-10 overlay-sub-pages'>
+      <div className='relative h-[35vh] lg:h-[60vh] z-10 overlay-sub-pages'>
         <Swiper
           className='mySwiper'
           modules={[Autoplay, FreeMode]}
@@ -37,7 +37,7 @@ const ImagesSlider: React.FC<SliderImage> = ({
         >
           {images.map((item, i) => (
             <SwiperSlide key={i}>
-              <div className='relative w-full h-[60vh]  aspect-[1] overflow-hidden'>
+              <div className='relative w-full  h-[35vh] lg:h-[60vh]  aspect-[1] overflow-hidden'>
                 <Image
                   src={`${item}`}
                   fill
@@ -55,7 +55,7 @@ const ImagesSlider: React.FC<SliderImage> = ({
           <div className='container text-center'>
             <div className='w-full max-w-[65%] mx-auto'>
               <SlideUp delay={0.3}>
-                <h1 className='text-white font-semibold font-barlowSemoCondensed text-6xl'>
+                <h1 className='text-white font-semibold font-barlowSemoCondensed text-4xl lg:text-6xl'>
                   {title}
                 </h1>
               </SlideUp>

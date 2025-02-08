@@ -10,7 +10,6 @@ export default function MasonryPage() {
     '/images/banner/banner-1.jpg',
     '/images/gallery/dear.jpg',
     '/images/banner/banner-2.jpeg',
-
     '/images/banner/banner-4.jpg',
     '/images/banner/banner-6.jpg',
     '/images/gallery/elefant.jpg',
@@ -29,14 +28,14 @@ export default function MasonryPage() {
     <>
       <ImagesSlider images={['/images/banner/banner-6.jpg']} title='Gallery' />
       <div className='container py-10'>
-        <div className='columns-3'>
+        <div className='columns-2 lg:columns-3 gap-2 lg:gap-4'>
           {ImageGrid.map((item, i) => (
             <div key={i} className='break-inside-avoid'>
               <SlideUp>
                 <Image
                   fill
                   src={item}
-                  className='w-full object-cover !relative mb-4'
+                  className='w-full object-cover !relative mb-2 lg:mb-4'
                   quality={2}
                   loading='lazy'
                   alt='Image'

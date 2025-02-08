@@ -7,7 +7,7 @@ const Testimonial = () => {
     <section className='bg-[#14151b]'>
       <div className='container pb-50'>
         <div className='flex flex-col lg:flex-row justify-between items-center gap-10'>
-          <div className='text-left w-full lg:w-[40%]'>
+          <div className='text-center lg:text-left w-full lg:w-[40%]'>
             <PageHeader
               subtitle={'Testimonial'}
               heading={'What our clients says about us'}
