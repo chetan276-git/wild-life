@@ -7,13 +7,13 @@ import Button from '../button/Button';
 
 export default function HeroSlider() {
   return (
-    <div className='relative h-[60vh] xl:h-screen w-full overflow-hidden z-10 banner-overlay-gradient '>
+    <div className='relative h-[85vh] xl:h-screen w-full overflow-hidden z-10 banner-overlay-gradient '>
       <video
         src='/video/background-video.mp4'
         muted
         autoPlay
         loop
-        className='w-full h-[60vh] xl:h-screen object-cover'
+        className='w-full h-[85vh] xl:h-screen object-cover'
       />
 
       <motion.div

@@ -6,20 +6,20 @@ const Testimonial = () => {
   return (
     <section className='bg-[#14151b]'>
       <div className='container pb-50'>
-        <div className='flex justify-between items-center gap-10'>
-          <div className='text-left w-[40%]'>
+        <div className='flex flex-col lg:flex-row justify-between items-center gap-10'>
+          <div className='text-left w-full lg:w-[40%]'>
             <PageHeader
               subtitle={'Testimonial'}
               heading={'What our clients says about us'}
               description={''}
             />
           </div>
-          <div className='w-[60%]'>
-            <div className='flex justify-between w-full items-center gap-5'>
-              <div className='w-[50%]'>
+          <div className='w-full lg:w-[60%]'>
+            <div className='flex flex-col lg:flex-row justify-between w-full items-center gap-4 lg:gap-5'>
+              <div className='w-full lg:w-[50%]'>
                 <TestimonialCard />
               </div>
-              <div className='w-[50%] flex flex-col gap-4'>
+              <div className='w-full lg:w-[50%] flex flex-col gap-4'>
                 <TestimonialCard />
                 <TestimonialCard />
               </div>

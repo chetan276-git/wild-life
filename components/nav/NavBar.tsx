@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { AngleArrow } from '../Icons';
+import { AngleArrow, Close } from '../Icons';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -49,13 +49,14 @@ export default function Navbar() {
     <nav className='text-white absolute w-full z-[999] py-6'>
       <div className='container'>
         <div className='flex justify-between items-center'>
-          <div className='flex-shrink-0'>
+          <div className='flex-shrink-0 '>
             <Link href='/'>
               <Image
                 src='/images/logo/logo.svg'
                 width={200}
                 height={150}
                 alt='Logo'
+                className='w-[140px] h-[auto] md:w-[200px] md:h-[auto]'
               />
             </Link>
           </div>
@@ -139,7 +140,10 @@ export default function Navbar() {
             : 'md:hidden fixed top-0 left-[-100%] w-[80%] h-full transform transition-all duration-300 ease-in-out'
         }`}
       >
-        <div className='p-4 bg-[#171822]/95 border border-[#727da133] backdrop-blur-md backdrop-opacity-20 w-full h-full flex flex-col gap-6 font-medium font-poppins text-sm'>
+        <div className='p-4 bg-[#171822]/95 border border-[#727da133] backdrop-blur-md backdrop-opacity-20 w-full h-full flex flex-col gap-6 font-medium font-poppins text-sm relative'>
+          <div onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <Close />
+          </div>
           <Link href='/'>
             <Image
               src='/images/logo/logo.svg'

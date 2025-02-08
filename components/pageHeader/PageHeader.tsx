@@ -16,19 +16,19 @@ const PageHeader: React.FC<HeaderProps> = ({
     <>
       <SlideUp delay={0.3}>
         {subtitle && (
-          <h6 className='font-amatic text-3xl font-bold text-primary'>
+          <h6 className='font-amatic text-lg xl:text-3xl font-bold text-primary'>
             {subtitle}
           </h6>
         )}
       </SlideUp>
       <SlideUp delay={0.3}>
-        <h2 className='font-barlowSemoCondensed text-white text-5xl font-semibold  mt-5'>
+        <h2 className='font-barlowSemoCondensed text-white text-3xl xl:text-5xl font-semibold mt-2  xl:mt-5'>
           {heading}
         </h2>
       </SlideUp>
       {description && (
         <SlideUp delay={0.3}>
-          <p className='text-xl text-[#ffffffb3] mt-4 mb-6 font-normal font-barlowSemoCondensed'>
+          <p className='text-md xl:text-xl text-[#ffffffb3] mt-4 mb-6 font-normal font-barlowSemoCondensed'>
             {description}
           </p>
         </SlideUp>

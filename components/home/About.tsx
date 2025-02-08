@@ -13,11 +13,11 @@ const AboutHome = () => {
         src='/images/effects/bg-overlay2.png'
         fill
         alt='Bg Overlay'
-        className='absolute top-0 left-0 w-full h-full aspect-[1] z-10 opacity-40'
+        className='absolute top-0 left-0 w-full h-full aspect-[1] z-10 opacity-40 object-contain md:object-cover'
       />
       <div className='container '>
-        <div className='flex gap-16 items-center'>
-          <div className='w-2/4 relative'>
+        <div className='flex flex-col xl:flex-row gap-6 xl:gap-16 items-center'>
+          <div className='w-full xl:w-2/4 relative'>
             <SlideLeft delay={0.3}>
               <div className='w-full aspect-[1]'>
                 <Image
@@ -30,7 +30,7 @@ const AboutHome = () => {
             </SlideLeft>
           </div>
 
-          <div className='w-2/3'>
+          <div className='w-full xl:w-2/3'>
             <div className='text-left'>
               <PageHeader
                 subtitle={'Welcome to Wanderluxe Expeditions'}

@@ -14,7 +14,7 @@ const HomeDestination = () => {
         src='/images/effects/bg-overlay1.png'
         fill
         alt='Bg Overlay'
-        className='absolute top-0 left-0 w-full h-full aspect-[1] z-10 opacity-40'
+        className='absolute top-0 left-0 w-full h-full aspect-[1] z-10 opacity-40 hidden md:block'
       />
       <FirstTimeWildlifeTour />
       <section
@@ -27,9 +27,10 @@ const HomeDestination = () => {
         }}
       >
         <div className='container'>
-          <h2 className='font-semibold text-5xl'>Animals you will meet</h2>
-
-          <ul className='flex justify-center flex-wrap max-w-[60%] mx-auto items-center mt-10 font-medium text-2xl gap-5'>
+          <h2 className='font-semibold text-3xl lg:text-5xl'>
+            Animals you will meet
+          </h2>
+          <ul className='flex justify-center flex-wrap w-full lg:max-w-[60%] mx-auto items-center mt-10 font-medium text-lg lg:text-2xl gap-5'>
             {[
               'Tiager',
               '-',

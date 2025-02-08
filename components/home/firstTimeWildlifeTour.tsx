@@ -22,7 +22,7 @@ const FirstTimeWildlifeTour = () => {
             }
           />
         </div>
-        <div className='mt-16 grid grid-cols-3 gap-6'>
+        <div className='mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6'>
           {destinationsCategories.map((item, i) => (
             <div
               className='relative h-full w-full bg-[#1a1a1e] overflow-hidden rounded-xl bg-clip-padding border border-[#727da133]
