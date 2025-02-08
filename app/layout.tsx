@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Montserrat, Barlow_Semi_Condensed } from 'next/font/google';
+import { Barlow_Semi_Condensed, Poppins } from 'next/font/google';
 import './global.scss';
 import Navbar from '@/components/nav/NavBar';
 import Footer from '@/components/footer/footer';
 import WhatsAppButton from '@/components/wahtsAppButton/whatsAppButton';
 
-const geistSans = Montserrat({
+const getPoppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
-  variable: '--font-montserrat',
+  variable: '--font-poppins',
 });
 const geistBarlowSemoCondensed = Barlow_Semi_Condensed({
   subsets: ['latin'],
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistBarlowSemoCondensed.variable}  antialiased`}
+        className={`${getPoppins.variable} ${geistBarlowSemoCondensed.variable}  antialiased`}
       >
         <Navbar />
         {children}

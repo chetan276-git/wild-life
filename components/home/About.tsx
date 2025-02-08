@@ -8,7 +8,7 @@ import SlideUp from '../SlideUp';
 
 const AboutHome = () => {
   return (
-    <section className='bg-[#0b0c14] relative'>
+    <section className='bg-[#050b0f] relative'>
       <Image
         src='/images/effects/bg-overlay2.png'
         fill
@@ -19,9 +19,9 @@ const AboutHome = () => {
         <div className='flex gap-16 items-center'>
           <div className='w-2/4 relative'>
             <SlideLeft delay={0.3}>
-              <div className='w-full aspect-[0.8]'>
+              <div className='w-full aspect-[1]'>
                 <Image
-                  src='/images/gallery/dear.jpg'
+                  src='/images/banner/banner-6.jpg'
                   fill
                   objectFit='cover'
                   alt='About Image'

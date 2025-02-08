@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: 'var(--font-montserrat)',
+        poppins: 'var(--font-poppins)',
         barlowSemoCondensed: 'var(--font-barlow-semi-condensed)',
         amatic: ['Amatic SC', 'serif'],
       },

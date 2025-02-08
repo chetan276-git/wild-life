@@ -132,9 +132,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div className='md:hidden'>
-          <div className='px-2 pt-2 pb-3 space-y-1'>
+      {!isMenuOpen && (
+        <div className='md:hidden fixed top-0 left-0 w-[250px] h-screen'>
+          <div className='px-2 pt-2 pb-3 space-y-1 bg-red-700'>
             {navLinks.map((link, index) =>
               !link.dropdown ? (
                 <Link key={index} href={link.href || '#'}>

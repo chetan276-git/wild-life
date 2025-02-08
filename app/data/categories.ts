@@ -19,27 +19,27 @@ export const destinationsCategories: Category[] = [
     name: 'Extended Wildlife Excursion',
     img: '/images/destination/extendend-wildlife.png',
     description:
-      ' Immerse yourself in a multi-day adventure, exploring diverse wildlife ecosystems and unique species.',
+      'Experience the thrill of tracking the majestic Bengal tiger in their natural habitat.',
   },
   {
     slug: 'customised-experience',
     name: 'Customised Experience',
     img: '/images/destination/tiger-safari-tour.jpg',
     description:
-      'Tailor your wildlife adventure to your preferences, with bespoke itineraries, personalized guides, and unique encounters designed just for you.',
+      'Experience the thrill of tracking the majestic Bengal tiger in their natural habitat.',
   },
   {
     slug: 'birding-tours',
     name: 'Birding Tours',
     img: '/images/destination/birding-tour.jpg',
     description:
-      'Discover a world of vibrant bird species, from rare to exotic, with expert guides on hand to help you spot them.',
+      'Experience the thrill of tracking the majestic Bengal tiger in their natural habitat.',
   },
   {
     slug: 'luxury-overseas',
     name: 'Luxury Overseas',
     img: '/images/destination/luxury-overseas.jpg',
     description:
-      'Indulge in an exclusive, high-end wildlife tour abroad, where comfort meets adventure in some of the world’s most stunning nature reserves.',
+      'Experience the thrill of tracking the majestic Bengal tiger in their natural habitat.',
   },
 ];

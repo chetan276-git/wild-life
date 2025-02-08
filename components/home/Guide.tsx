@@ -51,7 +51,7 @@ const SliderImages = [
 
 const Guide = () => {
   return (
-    <section className='pb-0'>
+    <>
       <div className='container'>
         <div className='text-center'>
           <PageHeader
@@ -101,7 +101,7 @@ const Guide = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </>
   );
 };
 
