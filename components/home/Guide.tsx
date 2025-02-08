@@ -71,6 +71,17 @@ const Guide = () => {
         autoplay={{ delay: 3000 }}
         grabCursor={true}
         slidesPerView={4}
+        breakpoints={{
+          320: {
+            slidesPerView: 1.5,
+          },
+          768: {
+            slidesPerView: 3.5,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
       >
         {SliderImages.map((item, i) => (
           <SwiperSlide key={i} className='text-center'>

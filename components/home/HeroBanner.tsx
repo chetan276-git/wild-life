@@ -24,7 +24,7 @@ export default function HeroSlider() {
       />
 
       <motion.div
-        className='absolute inset-0 flex flex-col justify-center items-start text-white text-left w-full z-40'
+        className='absolute inset-0 flex flex-col justify-center items-start text-white text-center lg:text-left w-full z-40'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}

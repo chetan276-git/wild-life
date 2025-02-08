@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='container'>
-        <div className='py-10'>
+        <div className='py-6 lg:py-10'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-0 text-white'>
             <div className='border-r border-[#ffffff0a] pr-8'>
               <Link href='/'>
