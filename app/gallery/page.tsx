@@ -27,7 +27,7 @@ export default function MasonryPage() {
   return (
     <>
       <ImagesSlider images={['/images/banner/banner-6.jpg']} title='Gallery' />
-      <div className='container py-10'>
+      <div className='container py-10 !pl-0 !pr-0 lg:pl-4 lg:pr-4'>
         <div className='columns-2 lg:columns-3 gap-2 lg:gap-4'>
           {ImageGrid.map((item, i) => (
             <div key={i} className='break-inside-avoid'>
