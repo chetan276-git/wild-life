@@ -13,7 +13,14 @@ export default function HeroSlider() {
         muted
         autoPlay
         loop
-        className='w-full h-[85vh] xl:h-screen object-cover'
+        className='w-full h-[85vh] xl:h-screen object-cover hidden lg:block'
+      />
+      <video
+        src='/video/mobile-video-bg.mp4'
+        muted
+        autoPlay
+        loop
+        className='w-full h-[85vh] xl:h-screen object-cover lg:hidden'
       />
 
       <motion.div
@@ -25,10 +32,10 @@ export default function HeroSlider() {
       >
         <div className='container'>
           <div className='w-full xl:max-w-[65%] xl:pt-10'>
-            <h1 className='text-4xl xl:text-8xl font-bold drop-shadow-xl uppercase shadow-lg'>
+            <h1 className='text-4xl xl:text-8xl font-bold uppercase '>
               Explore the Wild
             </h1>
-            <p className='text-md xl:text-xl font-medium font-barlowSemoCondensed drop-shadow-lg mt-4 mb-10'>
+            <p className='text-md xl:text-xl font-medium font-barlowSemoCondensed mt-4 mb-10'>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
